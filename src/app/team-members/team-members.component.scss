@@ -1,0 +1,32 @@
+:host {
+  .our-team {
+    padding: 20px;
+    &__title {
+      display: flex;
+      justify-content: center;
+      color: #092b45;
+      font-weight: bold;
+    }
+    &__blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  .info {
+    a {
+      text-decoration: none;
+    }
+    &__mail {
+      display: block;
+      color: #00d0ff;
+    }
+    &__phone {
+      display: block;
+      padding: 3px;
+      font-size: 15px;
+      color: inherit;
+    }
+  }
+}

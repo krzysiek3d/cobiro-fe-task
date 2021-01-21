@@ -1,0 +1,16 @@
+<div class="our-team" *ngFor="let team of ourTeams$ | async">
+  <h1 class="our-team__title">{{ team?.title }}</h1>
+  <div class="our-team__blocks">
+    <app-card *ngFor="let member of team.members">
+      <img src="{{ member?.avatar }}" cardAvatar />
+      <app-card-header>
+        <app-card-title>{{ member?.title }}</app-card-title>
+        <app-card-subtitle>{{ member?.subtitle }}</app-card-subtitle>
+      </app-card-header>
+      <app-card-content class="info">
+        <span class="info__mail" mailTo>{{ member?.email }}</span>
+        <span class="info__phone" callTo>{{ member?.phone }}</span>
+      </app-card-content>
+    </app-card>
+  </div>
+</div>
